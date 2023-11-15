@@ -35,7 +35,7 @@ end)
 
 vim.keymap.set("n", "<leader>gxa", function ()
     local message = vim.fn.input("Commit message: ")
-    vim.cmd(string.format(":G add . | :G commit -m '%s'<CR> | :G push", message))
+    vim.cmd(string.format(":G add . | :G commit -m '%s' | :G push", message))
 end)
 
 -- Open config
