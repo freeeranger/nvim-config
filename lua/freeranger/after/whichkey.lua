@@ -16,5 +16,6 @@ which_key.register({
     f = {
         name = "file",
         d = { "set cwd to files directory" }
-    }
+    },
+    g = { "vim-fugitive" }
 }, { prefix = "<leader>" })

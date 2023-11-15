@@ -17,3 +17,18 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- set neovim cwd to current files directory
 vim.keymap.set("n", "<leader>fd", ":cd %:p:h<CR>")
+
+-- fugitive keymaps
+vim.keymap.set("n", "<leader>gw", ":Git<CR>")
+vim.keymap.set("n", "<leader>gs", ":G status<CR>")
+vim.keymap.set("n", "<leader>gA", ":G add .<CR>")
+vim.keymap.set("n", "<leader>ga", ":G add %:p<CR>")
+vim.keymap.set("n", "<leader>gR", ":G reset .<CR>")
+vim.keymap.set("n", "<leader>gr", ":G reset %:p<CR>")
+vim.keymap.set("n", "<leader>gp", ":G push<CR>")
+vim.keymap.set("n", "<leader>gl", ":G pull<CR>")
+
+vim.keymap.set("n", "<leader>gc", function()
+    local message = vim.fn.input("Commit message: ")
+    vim.cmd(string.format(":G commit -m '%s'", message))
+end)
