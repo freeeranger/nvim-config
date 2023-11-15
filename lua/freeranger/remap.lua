@@ -36,6 +36,7 @@ end)
 vim.keymap.set("n", "<leader>gxa", function ()
     local message = vim.fn.input("Commit message: ")
     vim.cmd(string.format(":G add . | :G commit -q -m '%s' | :G push -q", message))
+    print("Staged, committed and pushed all changes")
 end)
 
 -- Open config
