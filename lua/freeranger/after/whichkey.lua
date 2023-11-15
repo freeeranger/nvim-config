@@ -7,15 +7,30 @@ which_key.setup()
 
 which_key.register({
     p = {
-        name = "project",
-        f = { "open telescope" },
-        v = { "file explorer"},
-        s = { "grep for string" },
+        name = "Project",
+        f = { "Open telescope" },
+        v = { "File explorer"},
+        s = { "Grep for string" },
     },
-    u = { "undo-tree" },
+    u = { "Undo tree" },
     f = {
-        name = "file",
+        name = "File",
         d = { "set cwd to files directory" }
     },
-    g = { "vim-fugitive" }
+    g = {
+        name = "Git",
+        w = { "Open git window" },
+        s = { "Status" },
+        a = { "Add current file" },
+        A = { "Add all files" },
+        r = { "Reset current file" },
+        R = { "Reset all files" },
+        c = { "Commit" },
+        p = { "Push" },
+        l = { "Pull" },
+        x = {
+            name = "Advanced",
+            a = {"Add, commit and push everything"}
+        }
+    }
 }, { prefix = "<leader>" })
