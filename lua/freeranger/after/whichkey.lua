@@ -11,7 +11,6 @@ which_key.register({
         f = { "Open telescope" },
         v = { "File explorer"},
         s = { "Grep for string" },
-        c = { "Open config directory" }
     },
     u = { "Undo tree" },
     f = {
@@ -33,5 +32,11 @@ which_key.register({
             name = "Advanced",
             a = {"Add, commit and push everything"}
         }
+    },
+    o = {
+        name = "Open",
+        t = { "Terminal" },
+        c = { "Config directory" },
+        e = { "Trouble" }
     }
 }, { prefix = "<leader>" })

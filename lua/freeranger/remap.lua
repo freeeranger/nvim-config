@@ -43,8 +43,11 @@ vim.keymap.set("n", "<leader>gxa", function ()
 end)
 
 -- Open config
-vim.keymap.set("n", "<leader>pc", function ()
+vim.keymap.set("n", "<leader>oc", function ()
     local config_dir = vim.fn.stdpath("config")
     vim.cmd(":e " .. config_dir .. "/init.lua")
     vim.cmd(":cd %:p:h")
 end)
+
+vim.keymap.set("n", "<leader>ot", ":ToggleTerm<CR>")
+vim.keymap.set("n", "<leader>oe", ":TroubleToggle<CR>")
