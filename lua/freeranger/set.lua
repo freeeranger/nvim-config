@@ -33,3 +33,9 @@ vim.g.mapleader = " "
 vim.cmd("language en_US")
 
 vim.opt.smartindent = true
+vim.opt.signcolumn = "yes"
+
+vim.fn.sign_define("DiagnosticSignError", { text = '🆇', texthl = "DiagnosticSignError" })
+vim.fn.sign_define("DiagnosticSignWarn", { text = '⚠️', texthl = "DiagnosticSignWarn" })
+vim.fn.sign_define("DiagnosticSignInfo", { text = 'ℹ️', texthl = "DiagnosticSignInfo" })
+vim.fn.sign_define("DiagnosticSignHint", { text = '', texthl = "DiagnosticSignHint" })
