@@ -11,6 +11,7 @@ which_key.register({
         f = { "Open telescope" },
         v = { "File explorer"},
         s = { "Grep for string" },
+        c = { "Open config directory" }
     },
     u = { "Undo tree" },
     f = {
