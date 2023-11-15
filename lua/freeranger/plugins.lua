@@ -64,5 +64,9 @@ require("lazy").setup({
         },
     },
     { 'folke/which-key.nvim' },
-    { 'tpope/vim-fugitive' }
+    { 'tpope/vim-fugitive' },
+    {
+        'windwp/nvim-autopairs',
+        event = 'InsertEnter'
+    }
 })

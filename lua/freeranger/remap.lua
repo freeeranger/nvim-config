@@ -15,6 +15,9 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 -- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
+vim.keymap.set("n", "<C-j>", ":bprevious<CR>")
+vim.keymap.set("n", "<C-k>", ":bnext<CR>")
+
 -- set neovim cwd to current files directory
 vim.keymap.set("n", "<leader>fd", ":cd %:p:h<CR>")
 
