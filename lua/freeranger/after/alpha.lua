@@ -14,12 +14,6 @@ dashboard.section.header.val = {
     [[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
 }
 
-local function footer()
-    local plugin_count = #vim.tbl_keys(require("lazy").plugins())
-
-    return "Neovim loaded with " .. plugin_count .. " plugins"
-end
-
 dashboard.section.buttons.val = {
     dashboard.button("SPC b n", "New buffer", ":enew<CR>"),
     dashboard.button("SPC b o", "Open buffer", ":e "),
@@ -28,7 +22,11 @@ dashboard.section.buttons.val = {
     dashboard.button("SPC p v", "File explorer", ":Explore<CR>"),
     dashboard.button("SPC a q", "Quit neovim", ":qa!<CR>"),
 }
-dashboard.section.footer.val = footer()
+dashboard.section.footer.val = function()
+    local plugin_count = #vim.tbl_keys(require("lazy").plugins())
+
+    return "Neovim loaded with " .. plugin_count .. " plugins"
+end
 
 
 alpha.setup(dashboard.opts)
