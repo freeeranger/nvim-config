@@ -12,7 +12,6 @@ which_key.register({
         v = { "File explorer"},
         s = { "Grep for string" },
     },
-    u = { "Undo tree" },
     f = {
         name = "File",
         d = { "set cwd to files directory" }
@@ -39,6 +38,7 @@ which_key.register({
         c = { "Config directory" },
         e = { "Trouble" },
         l = { "Lazy" },
-        m = { "Mason" }
+        m = { "Mason" },
+        u = { "Undo tree" },
     }
 }, { prefix = "<leader>" })

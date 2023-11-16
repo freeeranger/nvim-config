@@ -25,6 +25,7 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "no"
+vim.opt.sidescroll = 1
 
 vim.opt.updatetime = 50
 
