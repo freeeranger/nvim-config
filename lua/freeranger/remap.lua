@@ -19,7 +19,7 @@ vim.keymap.set("n", "<C-j>", ":bprevious<CR>")
 vim.keymap.set("n", "<C-k>", ":bnext<CR>")
 
 -- set neovim cwd to current files directory
-vim.keymap.set("n", "<leader>fd", ":cd %:p:h<CR>")
+vim.keymap.set("n", "<leader>bd", ":cd %:p:h<CR>")
 
 -- git keymaps
 vim.keymap.set("n", "<leader>gw", ":Git<CR>")
@@ -54,3 +54,8 @@ vim.keymap.set("n", "<leader>oe", ":TroubleToggle<CR>")
 vim.keymap.set("n", "<leader>ol", ":Lazy<CR>")
 vim.keymap.set("n", "<leader>om", ":Mason<CR>")
 vim.keymap.set("n", "<leader>ou", vim.cmd.UndotreeToggle)
+
+vim.keymap.set("n", "<leader>bn", ":enew<CR>")
+vim.keymap.set("n", "<leader>bo", ":e ")
+
+vim.keymap.set("n", "<leader>aq", ":qa!<CR>")

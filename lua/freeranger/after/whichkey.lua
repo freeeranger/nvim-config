@@ -12,9 +12,11 @@ which_key.register({
         v = { "File explorer"},
         s = { "Grep for string" },
     },
-    f = {
-        name = "File",
-        d = { "set cwd to files directory" }
+    b = {
+        name = "Buffer",
+        o = { "Open buffer" },
+        n = { "New buffer" },
+        d = { "Set cwd to buffer's directory" }
     },
     g = {
         name = "Git",
@@ -40,5 +42,9 @@ which_key.register({
         l = { "Lazy" },
         m = { "Mason" },
         u = { "Undo tree" },
+    },
+    a = {
+        name = "Application",
+        q = { "Quit" }
     }
 }, { prefix = "<leader>" })
