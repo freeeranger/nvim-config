@@ -37,6 +37,8 @@ which_key.register({
         name = "Open",
         t = { "Terminal" },
         c = { "Config directory" },
-        e = { "Trouble" }
+        e = { "Trouble" },
+        l = { "Lazy" },
+        m = { "Mason" }
     }
 }, { prefix = "<leader>" })
