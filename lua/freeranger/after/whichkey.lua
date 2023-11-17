@@ -31,8 +31,10 @@ which_key.register({
         l = { "Pull" },
         x = {
             name = "Advanced",
-            a = {"Add, commit and push everything"}
-        }
+            a = {"Add, commit and push everything"},
+            i = {"Completely setup a repo"}
+        },
+        i = { "Initialize" },
     },
     o = {
         name = "Open",

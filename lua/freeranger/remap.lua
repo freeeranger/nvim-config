@@ -27,6 +27,7 @@ vim.keymap.set("n", "<leader>gR", ":G reset .<CR>")
 vim.keymap.set("n", "<leader>gr", ":G reset %:p<CR>")
 vim.keymap.set("n", "<leader>gp", ":G push<CR>")
 vim.keymap.set("n", "<leader>gl", ":G pull<CR>")
+vim.keymap.set("n", "<leader>gi", ":G init")
 
 vim.keymap.set("n", "<leader>gc", function ()
     local message = vim.fn.input("Commit message: ")
@@ -38,6 +39,13 @@ vim.keymap.set("n", "<leader>gxa", function ()
     vim.cmd(string.format(":G add . | :G commit -q -m '%s' | :G push -q", message))
     print("Staged, committed and pushed all changes")
 end)
+
+vim.keymap.set("n", "<leader>gxi", function ()
+    local message = vim.fn.input("Repo url: ")
+    print(string.format(":G init | :G add . | :G commit -q -m 'Initial commit' | git remote add origin %s | git branch -M main | :G push -q -u origin main", message))
+    print("Repo successfully set up")
+end)
+
 
 -- Open
 vim.keymap.set("n", "<leader>ot", ":ToggleTerm<CR>")
