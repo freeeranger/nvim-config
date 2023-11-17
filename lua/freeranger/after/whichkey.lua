@@ -42,6 +42,7 @@ which_key.register({
         l = { "Lazy" },
         m = { "Mason" },
         u = { "Undo tree" },
+        a = { "Alpha" }
     },
     a = {
         name = "Application",

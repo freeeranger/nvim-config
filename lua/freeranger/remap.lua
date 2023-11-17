@@ -18,10 +18,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<C-j>", ":bprevious<CR>")
 vim.keymap.set("n", "<C-k>", ":bnext<CR>")
 
--- set neovim cwd to current files directory
-vim.keymap.set("n", "<leader>bd", ":cd %:p:h<CR>")
-
--- git keymaps
+-- Git
 vim.keymap.set("n", "<leader>gw", ":Git<CR>")
 vim.keymap.set("n", "<leader>gs", ":G status<CR>")
 vim.keymap.set("n", "<leader>gA", ":G add .<CR>")
@@ -42,20 +39,26 @@ vim.keymap.set("n", "<leader>gxa", function ()
     print("Staged, committed and pushed all changes")
 end)
 
--- Open config
+-- Open
+vim.keymap.set("n", "<leader>ot", ":ToggleTerm<CR>")
+vim.keymap.set("n", "<leader>oe", ":TroubleToggle<CR>")
+vim.keymap.set("n", "<leader>ol", ":Lazy<CR>")
+vim.keymap.set("n", "<leader>om", ":Mason<CR>")
+vim.keymap.set("n", "<leader>ou", vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>oa", ":Alpha<CR>")
+
+-- Open config dir
 vim.keymap.set("n", "<leader>oc", function ()
     local config_dir = vim.fn.stdpath("config")
     vim.cmd(":e " .. config_dir .. "/init.lua")
     vim.cmd(":cd %:p:h")
 end)
 
-vim.keymap.set("n", "<leader>ot", ":ToggleTerm<CR>")
-vim.keymap.set("n", "<leader>oe", ":TroubleToggle<CR>")
-vim.keymap.set("n", "<leader>ol", ":Lazy<CR>")
-vim.keymap.set("n", "<leader>om", ":Mason<CR>")
-vim.keymap.set("n", "<leader>ou", vim.cmd.UndotreeToggle)
 
+-- Buffer
 vim.keymap.set("n", "<leader>bn", ":enew<CR>")
 vim.keymap.set("n", "<leader>bo", ":e ")
+vim.keymap.set("n", "<leader>bd", ":cd %:p:h<CR>") -- set neovim cwd to current files directory
 
+-- Application
 vim.keymap.set("n", "<leader>aq", ":qa!<CR>")
