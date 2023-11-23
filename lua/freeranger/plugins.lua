@@ -80,5 +80,10 @@ require("lazy").setup({
         'goolord/alpha-nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
     },
-    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+    {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+    }
 })

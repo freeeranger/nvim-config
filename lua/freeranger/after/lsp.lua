@@ -10,6 +10,9 @@ lsp_zero.extend_cmp()
 local cmp = require('cmp')
 local types = require('cmp.types')
 
+
+local copilot = require("copilot.suggestion")
+
 local cmp_action = lsp_zero.cmp_action()
 local cmp_select = { behavior = types.cmp.SelectBehavior.Select }
 
@@ -20,7 +23,22 @@ cmp.setup({
         ['<C-f>'] = cmp_action.luasnip_jump_forward(),
         ['<C-b>'] = cmp_action.luasnip_jump_backward(),
         ['<CR>'] = cmp.mapping.confirm({select = true}),
-        ['<Tab>'] = cmp.mapping.confirm({select = true}),
+        ['<Tab>'] = cmp.mapping(function(fallback)
+            local function has_words_before()
+                local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+                return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
+            end
+
+            if copilot.is_visible() then
+                copilot.accept()
+            elseif cmp.visible() then
+                cmp.select_next_item()
+            elseif has_words_before() then
+                cmp.complete()
+            else
+                fallback()
+            end
+        end, {"i", "s"}),
         ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
         ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
         ['<C-e>'] = cmp.mapping.abort()
@@ -30,12 +48,9 @@ cmp.setup({
 local neodev = require("neodev")
 neodev.setup({})
 
--- This is where all the LSP shenanigans will live
 lsp_zero.extend_lspconfig()
 
 lsp_zero.on_attach(function(client, bufnr)
-    -- see :help lsp-zero-keybindings
-    -- to learn the available actions
     lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
@@ -46,8 +61,6 @@ mason_lspconf.setup({
     handlers = {
         lsp_zero.default_setup,
         lua_ls = function()
-            -- (Optional) Configure lua language server for neovim
-            -- local lua_opts = lsp_zero.nvim_lua_ls()
             require('lspconfig').lua_ls.setup({
                 settings = {
                     Lua = {
