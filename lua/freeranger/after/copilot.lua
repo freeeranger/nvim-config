@@ -21,7 +21,7 @@ copilot.setup({
         auto_trigger = true,
         debounce = 75,
         keymap = {
-            accept = "<>",
+            accept = "<M-[[>",
             accept_word = false,
             accept_line = false,
             next = "<M-]>",
