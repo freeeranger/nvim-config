@@ -86,5 +86,6 @@ require("lazy").setup({
         cmd = "Copilot",
         event = "InsertEnter",
     },
-    { 'RRethy/vim-illuminate' }
+    { 'RRethy/vim-illuminate' },
+    { 'CRAG666/code_runner.nvim' }
 })
