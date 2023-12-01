@@ -87,5 +87,7 @@ require("lazy").setup({
         event = "InsertEnter",
     },
     { 'RRethy/vim-illuminate' },
-    { 'CRAG666/code_runner.nvim' }
+    { 'CRAG666/code_runner.nvim' },
+    { 'prichrd/netrw.nvim' },
+    { 'ThePrimeagen/vim-be-good' }
 })
