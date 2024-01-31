@@ -6,10 +6,12 @@ local which_key = require("which-key")
 which_key.setup()
 
 which_key.register({
+    ["."] = {
+        "File browser",
+    },
     p = {
         name = "Project",
         f = { "Open telescope" },
-        v = { "File explorer"},
         s = { "Grep for string" },
     },
     b = {

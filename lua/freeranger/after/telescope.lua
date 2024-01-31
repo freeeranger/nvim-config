@@ -6,7 +6,7 @@ telescope.setup{
             theme = "ivy",
             previewer = true,
             layout_config = {
-                height = 15,
+                height = 17,
             },
             border = true,
             borderchars = {
@@ -19,7 +19,7 @@ telescope.setup{
             theme = "ivy",
             previewer = true,
             layout_config = {
-                height = 15,
+                height = 17,
             },
             border = true,
             borderchars = {
@@ -32,7 +32,7 @@ telescope.setup{
             theme = "ivy",
             previewer = true,
             layout_config = {
-                height = 15,
+                height = 17,
             },
             border = true,
             borderchars = {
