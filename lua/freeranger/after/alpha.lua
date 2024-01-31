@@ -3,37 +3,33 @@ local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 
 dashboard.section.header.val = {
-    [[                                                 ]],
-    [[                                                 ]],
-    [[                                                 ]],
-    [[                                                 ]],
-    [[                                                 ]],
-    [[                                                 ]],
-    [[                               __                ]],
-    [[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
-    [[ / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\  ]],
-    [[/\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
-    [[\ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\]],
-    [[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
-    [[                                                 ]],
-    [[          V E R S I O N     0 . 1 0 . 0          ]],
+	[[                                   ]],
+	[[                                   ]],
+	[[                                   ]],
+	[[                                   ]],
+	[[                                   ]],
+	[[   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ]],
+	[[    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ]],
+	[[          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ]],
+	[[           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ]],
+	[[          ⢠⣿⣿⣿⠈    ⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ]],
+	[[   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘  ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ]],
+	[[  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ]],
+	[[ ⣠⣿⠿⠛ ⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ]],
+	[[ ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇ ⠛⠻⢷⣄ ]],
+	[[      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ]],
+	[[       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ]],
+	[[                                   ]],
+	[[            N E O V I M            ]],
+	[[                                   ]],
 }
---
-dashboard.section.buttons.val = {
---     dashboard.button("SPC b n", "  New buffer", ":enew<CR>"),
---     dashboard.button("SPC b o", "󰈞  Open buffer", ":e "),
---     dashboard.button("SPC p o", "  Open project", ":Explore<CR>"),
---     dashboard.button("SPC o c", "  Open config", ":let config_path = stdpath('config') . '/init.lua' | execute 'e ' . config_path | execute 'cd ' . expand('%:p:h')<CR>"),
---     dashboard.button("SPC p v", "󰥨  File explorer", ":Explore<CR>"),
---     dashboard.button("SPC a q", "󰠚  Quit neovim", ":qa!<CR>"),
-}
-dashboard.section.footer.val = function()
-    local plugin_count = #vim.tbl_keys(require("lazy").plugins())
 
-    return "Neovim loaded with " .. plugin_count .. " plugins"
+dashboard.section.buttons.val = {}
+dashboard.section.footer.val = function()
+	local plugin_count = #vim.tbl_keys(require("lazy").plugins())
+	local load_time = require("lazy").stats().startuptime
+
+	return "Loaded " .. plugin_count .. " plugins in " .. load_time .. "ms"
 end
 
-
 alpha.setup(dashboard.opts)
-
-
