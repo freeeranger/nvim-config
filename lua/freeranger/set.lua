@@ -32,7 +32,7 @@ vim.opt.updatetime = 50
 
 vim.g.mapleader = " "
 
-vim.cmd("language en_US")
+-- vim.cmd("language en_US")
 
 vim.opt.smartindent = true
 vim.opt.signcolumn = "yes"
