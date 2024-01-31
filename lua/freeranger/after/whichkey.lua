@@ -9,10 +9,10 @@ which_key.register({
     ["."] = {
         "File browser",
     },
-    p = {
-        name = "Project",
-        f = { "Open telescope" },
-        s = { "Grep for string" },
+    f = {
+        name = "File",
+        f = { "Find file" },
+        s = { "Find string "},
     },
     b = {
         name = "Buffer",
@@ -53,8 +53,4 @@ which_key.register({
         u = { "Undo tree" },
         a = { "Alpha" }
     },
-    a = {
-        name = "Application",
-        q = { "Quit" }
-    }
 }, { prefix = "<leader>" })

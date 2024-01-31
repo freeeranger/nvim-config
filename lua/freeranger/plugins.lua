@@ -89,5 +89,6 @@ require("lazy").setup({
     { 'RRethy/vim-illuminate' },
     { 'CRAG666/code_runner.nvim' },
     { 'prichrd/netrw.nvim' },
-    { 'ThePrimeagen/vim-be-good' }
+    { 'ThePrimeagen/vim-be-good' },
+    { 'stevearc/conform.nvim' }
 })

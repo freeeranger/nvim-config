@@ -79,4 +79,3 @@ mason_lspconf.setup({
         end,
     }
 })
-
