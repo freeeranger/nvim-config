@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>.", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>ff", vim.cmd.Ex)
 
 -- Move selection
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -29,23 +29,27 @@ vim.keymap.set("n", "<leader>gp", ":G push<CR>")
 vim.keymap.set("n", "<leader>gl", ":G pull<CR>")
 vim.keymap.set("n", "<leader>gi", ":G init")
 
-vim.keymap.set("n", "<leader>gc", function ()
-    local message = vim.fn.input("Commit message: ")
-    vim.cmd(string.format(":G commit -m '%s'", message))
+vim.keymap.set("n", "<leader>gc", function()
+	local message = vim.fn.input("Commit message: ")
+	vim.cmd(string.format(":G commit -m '%s'", message))
 end)
 
-vim.keymap.set("n", "<leader>gxa", function ()
-    local message = vim.fn.input("Commit message: ")
-    vim.cmd(string.format(":G add . | :G commit -q -m '%s' | :G push -q", message))
-    print("Staged, committed and pushed all changes")
+vim.keymap.set("n", "<leader>gxa", function()
+	local message = vim.fn.input("Commit message: ")
+	vim.cmd(string.format(":G add . | :G commit -q -m '%s' | :G push -q", message))
+	print("Staged, committed and pushed all changes")
 end)
 
-vim.keymap.set("n", "<leader>gxi", function ()
-    local message = vim.fn.input("Repo url: ")
-    print(string.format(":G init | :G add . | :G commit -q -m 'Initial commit' | git remote add origin %s | git branch -M main | :G push -q -u origin main", message))
-    print("Repo successfully set up")
+vim.keymap.set("n", "<leader>gxi", function()
+	local message = vim.fn.input("Repo url: ")
+	print(
+		string.format(
+			":G init | :G add . | :G commit -q -m 'Initial commit' | git remote add origin %s | git branch -M main | :G push -q -u origin main",
+			message
+		)
+	)
+	print("Repo successfully set up")
 end)
-
 
 -- Open
 vim.keymap.set("n", "<leader>ot", ":ToggleTerm<CR>")
@@ -56,18 +60,17 @@ vim.keymap.set("n", "<leader>ou", vim.cmd.UndotreeToggle)
 vim.keymap.set("n", "<leader>oa", ":Alpha<CR>")
 
 -- Open config dir
-vim.keymap.set("n", "<leader>oc", function ()
-    local config_dir = vim.fn.stdpath("config")
-    vim.cmd(":e " .. config_dir .. "/init.lua")
-    vim.cmd(":cd %:p:h")
+vim.keymap.set("n", "<leader>oc", function()
+	local config_dir = vim.fn.stdpath("config")
+	vim.cmd(":e " .. config_dir .. "/init.lua")
+	vim.cmd(":cd %:p:h")
 end)
-
 
 -- Buffer
 vim.keymap.set("n", "<leader>bn", ":enew<CR>")
 vim.keymap.set("n", "<leader>bo", ":e ")
 vim.keymap.set("n", "<leader>bd", ":cd %:p:h<CR>") -- set neovim cwd to current files directory
-vim.keymap.set("n", "<leader>br", ":RunFile<CR>i", { noremap = true, silent = false})
+vim.keymap.set("n", "<leader>br", ":RunFile<CR>i", { noremap = true, silent = false })
 
 -- Edit
 vim.keymap.set("n", "<leader>er", ":lua vim.lsp.buf.rename()<CR>")
