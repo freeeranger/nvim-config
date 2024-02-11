@@ -9,11 +9,13 @@ which_key.register({
 	["."] = {
 		"Find file",
 	},
+	[","] = {
+		"Browse files",
+	},
 	f = {
 		name = "File",
 		f = { "Netrw" },
 		s = { "Find string " },
-		b = { "File browser" },
 	},
 	b = {
 		name = "Buffer",
