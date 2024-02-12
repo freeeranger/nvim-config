@@ -72,5 +72,6 @@ vim.keymap.set("n", "<leader>bo", ":e ")
 vim.keymap.set("n", "<leader>bd", ":cd %:p:h<CR>") -- set neovim cwd to current files directory
 vim.keymap.set("n", "<leader>br", ":RunFile<CR>i", { noremap = true, silent = false })
 
--- Edit
-vim.keymap.set("n", "<leader>er", ":lua vim.lsp.buf.rename()<CR>")
+-- Code
+vim.keymap.set("n", "<leader>cr", ":lua vim.lsp.buf.rename()<CR>")
+vim.keymap.set("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")

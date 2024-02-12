@@ -24,9 +24,10 @@ which_key.register({
 		d = { "Set cwd to buffer's directory" },
 		r = { "Run buffer" },
 	},
-	e = {
-		name = "Edit",
+	c = {
+		name = "Code",
 		r = { "Rename" },
+		a = { "Action" },
 	},
 	g = {
 		name = "Git",
