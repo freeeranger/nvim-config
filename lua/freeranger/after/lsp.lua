@@ -57,7 +57,15 @@ end)
 local mason_lspconf = require("mason-lspconfig")
 
 mason_lspconf.setup({
-	ensure_installed = {},
+	ensure_installed = {
+		"lua_ls",
+		"html",
+		"cssls",
+		"tsserver",
+		"emmet_language_server",
+		"tailwindcss",
+		"jedi_language_server",
+	},
 	handlers = {
 		lsp_zero.default_setup,
 		lua_ls = function()
@@ -80,6 +88,7 @@ mason_lspconf.setup({
 	},
 })
 
+-- Setting a different port for gdscript lsp since localhost doesn't work through wsl
 require("lspconfig").gdscript.setup({
 	cmd = { "nc", "172.19.112.1", "6005" },
 })
