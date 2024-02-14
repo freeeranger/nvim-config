@@ -96,4 +96,5 @@ require("lazy").setup({
 	{ "prichrd/netrw.nvim" },
 	{ "ThePrimeagen/vim-be-good" },
 	{ "stevearc/conform.nvim" },
+	{ "j-hui/fidget.nvim" },
 })
