@@ -65,6 +65,7 @@ mason_lspconf.setup({
 		"emmet_language_server",
 		"tailwindcss",
 		"jedi_language_server",
+		"gopls",
 	},
 	handlers = {
 		lsp_zero.default_setup,
