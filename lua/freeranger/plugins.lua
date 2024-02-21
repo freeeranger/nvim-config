@@ -76,7 +76,6 @@ require("lazy").setup({
 	},
 	{ "numToStr/Comment.nvim" },
 	{ "JoosepAlviste/nvim-ts-context-commentstring" },
-	{ "akinsho/toggleterm.nvim", config = true },
 	{
 		"folke/trouble.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -92,7 +91,6 @@ require("lazy").setup({
 		event = "InsertEnter",
 	},
 	{ "RRethy/vim-illuminate" },
-	{ "CRAG666/code_runner.nvim" },
 	{ "prichrd/netrw.nvim" },
 	{ "ThePrimeagen/vim-be-good" },
 	{ "stevearc/conform.nvim" },

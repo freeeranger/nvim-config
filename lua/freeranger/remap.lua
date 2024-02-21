@@ -17,6 +17,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "<C-j>", ":bprevious<CR>")
 vim.keymap.set("n", "<C-k>", ":bnext<CR>")
+vim.keymap.set("n", "<leader>bx", ":bdelete<CR>")
 
 -- Git
 vim.keymap.set("n", "<leader>gw", ":Git<CR>")
@@ -52,7 +53,6 @@ vim.keymap.set("n", "<leader>gxi", function()
 end)
 
 -- Open
-vim.keymap.set("n", "<leader>ot", ":ToggleTerm<CR>")
 vim.keymap.set("n", "<leader>oe", ":TroubleToggle<CR>")
 vim.keymap.set("n", "<leader>ol", ":Lazy<CR>")
 vim.keymap.set("n", "<leader>om", ":Mason<CR>")
@@ -70,7 +70,6 @@ end)
 vim.keymap.set("n", "<leader>bn", ":enew<CR>")
 vim.keymap.set("n", "<leader>bo", ":e ")
 vim.keymap.set("n", "<leader>bd", ":cd %:p:h<CR>") -- set neovim cwd to current files directory
-vim.keymap.set("n", "<leader>br", ":RunFile<CR>i", { noremap = true, silent = false })
 
 -- Code
 vim.keymap.set("n", "<leader>cr", ":lua vim.lsp.buf.rename()<CR>")

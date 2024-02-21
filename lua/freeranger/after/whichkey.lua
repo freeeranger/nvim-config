@@ -21,8 +21,8 @@ which_key.register({
 		name = "Buffer",
 		o = { "Open buffer" },
 		n = { "New buffer" },
-		d = { "Set cwd to buffer's directory" },
-		r = { "Run buffer" },
+		d = { "Set cwd" },
+		x = { "Close buffer" },
 	},
 	c = {
 		name = "Code",
@@ -49,7 +49,6 @@ which_key.register({
 	},
 	o = {
 		name = "Open",
-		t = { "Terminal" },
 		c = { "Config directory" },
 		e = { "Trouble" },
 		l = { "Lazy" },
