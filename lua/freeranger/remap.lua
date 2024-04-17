@@ -1,5 +1,10 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>ff", vim.cmd.Ex)
+
+-- Open netrw
+vim.keymap.set("n", "<leader>of", vim.cmd.Ex)
+
+-- Haram remap
+vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Move selection
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -10,11 +15,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
--- vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
--- vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
--- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
-
+-- Buffer actions
 vim.keymap.set("n", "<C-j>", ":bprevious<CR>")
 vim.keymap.set("n", "<C-k>", ":bnext<CR>")
 vim.keymap.set("n", "<leader>bx", ":bdelete<CR>")
@@ -70,6 +71,7 @@ end)
 vim.keymap.set("n", "<leader>bn", ":enew<CR>")
 vim.keymap.set("n", "<leader>bo", ":e ")
 vim.keymap.set("n", "<leader>bd", ":cd %:p:h<CR>") -- set neovim cwd to current files directory
+vim.keymap.set("n", "<leader>bf", vim.lsp.buf.format)
 
 -- Code
 vim.keymap.set("n", "<leader>cr", ":lua vim.lsp.buf.rename()<CR>")

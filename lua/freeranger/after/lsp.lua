@@ -64,7 +64,7 @@ mason_lspconf.setup({
 		"tsserver",
 		"emmet_language_server",
 		"tailwindcss",
-		"jedi_language_server",
+		"pyright",
 		"gopls",
 	},
 	handlers = {

@@ -12,15 +12,11 @@ which_key.register({
 	[","] = {
 		"Browse files",
 	},
-	f = {
-		name = "File",
-		f = { "Netrw" },
-		s = { "Find string " },
-	},
 	b = {
 		name = "Buffer",
 		o = { "Open buffer" },
 		n = { "New buffer" },
+		f = { "Format buffer" },
 		d = { "Set cwd" },
 		x = { "Close buffer" },
 	},
@@ -28,6 +24,7 @@ which_key.register({
 		name = "Code",
 		r = { "Rename" },
 		a = { "Action" },
+		s = { "Grep string" },
 	},
 	g = {
 		name = "Git",
@@ -55,5 +52,6 @@ which_key.register({
 		m = { "Mason" },
 		u = { "Undo tree" },
 		a = { "Alpha" },
+		f = { "Netrw" },
 	},
 }, { prefix = "<leader>" })
