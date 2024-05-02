@@ -62,7 +62,6 @@ mason_lspconf.setup({
 		"html",
 		"cssls",
 		"tsserver",
-		"emmet_language_server",
 		"tailwindcss",
 		"pyright",
 		"gopls",

@@ -6,52 +6,53 @@ local which_key = require("which-key")
 which_key.setup()
 
 which_key.register({
-	["."] = {
-		"Find file",
-	},
-	[","] = {
-		"Browse files",
-	},
-	b = {
-		name = "Buffer",
-		o = { "Open buffer" },
-		n = { "New buffer" },
-		f = { "Format buffer" },
-		d = { "Set cwd" },
-		x = { "Close buffer" },
-	},
-	c = {
-		name = "Code",
-		r = { "Rename" },
-		a = { "Action" },
-		s = { "Grep string" },
-	},
-	g = {
-		name = "Git",
-		w = { "Open git window" },
-		s = { "Status" },
-		a = { "Add current file" },
-		A = { "Add all files" },
-		r = { "Reset current file" },
-		R = { "Reset all files" },
-		c = { "Commit" },
-		p = { "Push" },
-		l = { "Pull" },
-		x = {
-			name = "Advanced",
-			a = { "Add, commit and push everything" },
-			i = { "Completely setup a repo" },
-		},
-		i = { "Initialize" },
-	},
-	o = {
-		name = "Open",
-		c = { "Config directory" },
-		e = { "Trouble" },
-		l = { "Lazy" },
-		m = { "Mason" },
-		u = { "Undo tree" },
-		a = { "Alpha" },
-		f = { "Netrw" },
-	},
+    ["."] = {
+        "Find file",
+    },
+    [","] = {
+        "Browse files",
+    },
+    b = {
+        name = "Buffer",
+        o = { "Open buffer" },
+        n = { "New buffer" },
+        f = { "Format buffer" },
+        d = { "Set cwd" },
+        x = { "Close buffer" },
+        u = { "Dos2Unix" }
+    },
+    c = {
+        name = "Code",
+        r = { "Rename" },
+        a = { "Action" },
+        s = { "Grep string" },
+    },
+    g = {
+        name = "Git",
+        w = { "Open git window" },
+        s = { "Status" },
+        a = { "Add current file" },
+        A = { "Add all files" },
+        r = { "Reset current file" },
+        R = { "Reset all files" },
+        c = { "Commit" },
+        p = { "Push" },
+        l = { "Pull" },
+        x = {
+            name = "Advanced",
+            a = { "Add, commit and push everything" },
+            i = { "Completely setup a repo" },
+        },
+        i = { "Initialize" },
+    },
+    o = {
+        name = "Open",
+        c = { "Config directory" },
+        e = { "Trouble" },
+        l = { "Lazy" },
+        m = { "Mason" },
+        u = { "Undo tree" },
+        a = { "Alpha" },
+        f = { "Netrw" },
+    },
 }, { prefix = "<leader>" })

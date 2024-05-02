@@ -32,25 +32,25 @@ vim.keymap.set("n", "<leader>gl", ":G pull<CR>")
 vim.keymap.set("n", "<leader>gi", ":G init")
 
 vim.keymap.set("n", "<leader>gc", function()
-	local message = vim.fn.input("Commit message: ")
-	vim.cmd(string.format(":G commit -m '%s'", message))
+    local message = vim.fn.input("Commit message: ")
+    vim.cmd(string.format(":G commit -m '%s'", message))
 end)
 
 vim.keymap.set("n", "<leader>gxa", function()
-	local message = vim.fn.input("Commit message: ")
-	vim.cmd(string.format(":G add . | :G commit -q -m '%s' | :G push -q", message))
-	print("Staged, committed and pushed all changes")
+    local message = vim.fn.input("Commit message: ")
+    vim.cmd(string.format(":G add . | :G commit -q -m '%s' | :G push -q", message))
+    print("Staged, committed and pushed all changes")
 end)
 
 vim.keymap.set("n", "<leader>gxi", function()
-	local message = vim.fn.input("Repo url: ")
-	print(
-		string.format(
-			":G init | :G add . | :G commit -q -m 'Initial commit' | git remote add origin %s | git branch -M main | :G push -q -u origin main",
-			message
-		)
-	)
-	print("Repo successfully set up")
+    local message = vim.fn.input("Repo url: ")
+    print(
+        string.format(
+            ":G init | :G add . | :G commit -q -m 'Initial commit' | git remote add origin %s | git branch -M main | :G push -q -u origin main",
+            message
+        )
+    )
+    print("Repo successfully set up")
 end)
 
 -- Open
@@ -62,9 +62,9 @@ vim.keymap.set("n", "<leader>oa", ":Alpha<CR>")
 
 -- Open config dir
 vim.keymap.set("n", "<leader>oc", function()
-	local config_dir = vim.fn.stdpath("config")
-	vim.cmd(":e " .. config_dir .. "/init.lua")
-	vim.cmd(":cd %:p:h")
+    local config_dir = vim.fn.stdpath("config")
+    vim.cmd(":e " .. config_dir .. "/init.lua")
+    vim.cmd(":cd %:p:h")
 end)
 
 -- Buffer
@@ -72,7 +72,11 @@ vim.keymap.set("n", "<leader>bn", ":enew<CR>")
 vim.keymap.set("n", "<leader>bo", ":e ")
 vim.keymap.set("n", "<leader>bd", ":cd %:p:h<CR>") -- set neovim cwd to current files directory
 vim.keymap.set("n", "<leader>bf", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>bu", ":w<CR> :!dos2unix %<CR><CR>")
 
 -- Code
-vim.keymap.set("n", "<leader>cr", ":lua vim.lsp.buf.rename()<CR>")
-vim.keymap.set("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")
+vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename)
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
+vim.keymap.set("n", "gr", vim.lsp.buf.references)
