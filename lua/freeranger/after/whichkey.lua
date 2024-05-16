@@ -51,8 +51,9 @@ which_key.register({
         e = { "Trouble" },
         l = { "Lazy" },
         m = { "Mason" },
-        u = { "Undo tree" },
+        u = { "UndoTree" },
         a = { "Alpha" },
         f = { "Netrw" },
+        i = { "LspInfo" },
     },
 }, { prefix = "<leader>" })

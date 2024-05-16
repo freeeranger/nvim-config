@@ -7,6 +7,6 @@ ibl.setup({
         show_end = false
     },
     indent = {
-        char = "▏"
+        char = "│"
     }
 })

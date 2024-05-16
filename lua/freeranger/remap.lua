@@ -59,9 +59,8 @@ vim.keymap.set("n", "<leader>ol", ":Lazy<CR>")
 vim.keymap.set("n", "<leader>om", ":Mason<CR>")
 vim.keymap.set("n", "<leader>ou", vim.cmd.UndotreeToggle)
 vim.keymap.set("n", "<leader>oa", ":Alpha<CR>")
-
--- Open config dir
-vim.keymap.set("n", "<leader>oc", function()
+vim.keymap.set("n", "<leader>oi", ":LspInfo<CR>")
+vim.keymap.set("n", "<leader>oc", function() -- Open config dir
     local config_dir = vim.fn.stdpath("config")
     vim.cmd(":e " .. config_dir .. "/init.lua")
     vim.cmd(":cd %:p:h")
