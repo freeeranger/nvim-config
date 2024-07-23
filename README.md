@@ -20,3 +20,4 @@ Run the following command: `git clone https://github.com/freeeranger/nvim-config
 - [ ] Get rid of `lsp-zero`
 - [ ] Add `undotree`
 - [ ] Improve `whichkey` icons
+- [ ] A very nice startpage
