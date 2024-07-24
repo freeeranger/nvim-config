@@ -4,10 +4,10 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Move current line
 vim.keymap.set("n", "<A-j>", ":m .-2<CR>==")
-vim.keymap.set("n", "√", ":m .-2<CR>==") -- Same as above but on my macbook keyboard
+vim.keymap.set("n", "ª", ":m .-2<CR>==") -- Same as above but on my macbook keyboard
 
 vim.keymap.set("n", "<A-k>", ":m .+1<CR>==")
-vim.keymap.set("n", "ª", ":m .+1<CR>==") -- Same as above but on my macbook keyboard
+vim.keymap.set("n", "√", ":m .+1<CR>==") -- Same as above but on my macbook keyboard
 
 -- Center screen after certain actions
 vim.keymap.set("n", "<C-d>", "<C-d>zz")

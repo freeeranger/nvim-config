@@ -14,6 +14,7 @@ Run the following command: `git clone https://github.com/freeeranger/nvim-config
 - [ ] Some kind of git integration
 - [ ] Add `nvim-ts-autotag`
 - [ ] Language specific stuff for python, go, c++
+- [ ] More markdown features (auto table alignment, toggling, etc)
 - [ ] Add `nvim-surround`
 - [ ] Add some kind of code action preview
 - [ ] Some kind of way to quickly move between files, maybe `harpoon`?
@@ -21,3 +22,4 @@ Run the following command: `git clone https://github.com/freeeranger/nvim-config
 - [ ] Add `undotree`
 - [ ] Improve `whichkey` icons
 - [ ] A very nice startpage
+- [ ] Open link in browser
