@@ -17,6 +17,7 @@ whichkey.add({
     { "<leader>bf", desc = "Format" },
     { "<leader>bd", desc = "Set cwd" },
     { "<leader>bt", desc = "Trim whitespace", icon = { icon = "", color = "cyan" } },
+    { "<leader>bx", desc = "Close", icon = { icon = "", color = "cyan" } },
 
     { "<leader>c", group = "Code", icon = { icon = "󰅨", color = "cyan" } },
     { "<leader>ca", desc = "Actions", icon = { icon = "", color = "cyan" } },

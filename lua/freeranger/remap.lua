@@ -1,14 +1,20 @@
 -- Move selection
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Move current line
+vim.keymap.set("n", "<A-j>", ":m .-2<CR>==")
+vim.keymap.set("n", "√", ":m .-2<CR>==") -- Same as above but on my macbook keyboard
+
+vim.keymap.set("n", "<A-k>", ":m .+1<CR>==")
+vim.keymap.set("n", "ª", ":m .+1<CR>==") -- Same as above but on my macbook keyboard
 
 -- Center screen after certain actions
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("x", "<leader>r", [["_dP]])         -- Replace selected text with register
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]]) -- Delete selection without saving to register
 
 -- Copy to system clipboard
@@ -25,6 +31,8 @@ vim.keymap.set("n", "<C-k>", ":bnext<CR>")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]) -- Replace all occurences
 
+vim.keymap.set("n", "Q", "<nop>")
+
 -- Buffer
 vim.keymap.set("n", "<leader>bs", ":so %<CR>")     -- Source current buffer
 vim.keymap.set("n", "<leader>bd", ":cd %:p:h<CR>") -- Set cwd to current file dir
@@ -36,6 +44,7 @@ vim.keymap.set("n", "<leader>bt", function()       -- Trim whitespace
         vim.fn.winrestview(current_view)
     end
 end)
+vim.keymap.set("n", "<leader>bx", ":bdelete<CR>")
 
 -- Open
 vim.keymap.set("n", "<leader>of", ":Oil<CR>")
