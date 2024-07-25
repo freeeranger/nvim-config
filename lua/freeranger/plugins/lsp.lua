@@ -112,6 +112,7 @@ mason_lspconf.setup({
                 },
             })
         end,
+        rust_analyzer = function() end,
     },
 })
 

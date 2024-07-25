@@ -14,13 +14,14 @@ local function is_git_repo()
     return result[1] == "true"
 end
 
-vim.keymap.set("n", "<leader>.", function()
-    if is_git_repo() then
-        builtin.git_files()
-    else
-        builtin.find_files()
-    end
-end, {})
+-- vim.keymap.set("n", "<leader>.", function()
+--     if is_git_repo() then
+--         builtin.git_files()
+--     else
+--         builtin.find_files()
+--     end
+-- end, {})
+vim.keymap.set("n", "<leader>.", builtin.find_files)
 
 vim.keymap.set("n", "gd", builtin.lsp_definitions, {})
 vim.keymap.set("n", "gr", builtin.lsp_references, {})

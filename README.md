@@ -2,14 +2,16 @@
 My personal neovim configuration
 
 ## Requirements:
+* Git
 * Neovim >= 0.10.0 (compiled with LuaJIT)
 * Ripgrep
-* Git
+* Rust + cargo nightly
 
 ## Installation:
 Run the following command: `git clone https://github.com/freeeranger/nvim-config.git ~/.config/nvim`
 
 ## Todo (no particular order):
+- [ ] Proper rust support
 - [ ] Add `refactoring.nvim`
 - [ ] Some kind of git integration
 - [ ] Add `nvim-ts-autotag`

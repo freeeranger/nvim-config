@@ -1,4 +1,3 @@
--- vim.o.clipboard = "unnamed"
 vim.o.mouse = "a"
 
 vim.opt.langmenu = "en_US"

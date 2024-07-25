@@ -71,6 +71,11 @@ require("lazy").setup(
         { "nvim-telescope/telescope.nvim" },
         { "MeanderingProgrammer/markdown.nvim", name = "render-markdown" },
         { "smjonas/inc-rename.nvim" },
+        {
+            "mrcjkb/rustaceanvim",
+            version = '^4',
+            lazy = false,
+        },
     },
     {
         ui = {
