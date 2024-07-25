@@ -24,7 +24,7 @@ vim.g.rustaceanvim = {
 local function on_attach(client, bufnr)
     -- TODO more keybinds + add these to whichkey
     vim.keymap.set("n", "<leader>ca", ":RustLsp codeAction<CR>")
-    vim.keymap.set("n", "<leader>cc", ":RutLsp openCargo<CR>")
+    vim.keymap.set("n", "<leader>cc", ":RustLsp openCargo<CR>")
 end
 
 local function on_detach(client, bufnr)
