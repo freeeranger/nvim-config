@@ -1,7 +1,7 @@
 require("freeranger.plugins.whichkey")
 require("freeranger.plugins.treesitter")
 require("freeranger.plugins.lualine")
-require("freeranger.plugins.catppuccin")
+require("freeranger.plugins.themes")
 require("freeranger.plugins.oil")
 require("freeranger.plugins.indentblankline")
 require("freeranger.plugins.colorizer")
