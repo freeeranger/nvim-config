@@ -21,7 +21,20 @@ end
 --         builtin.find_files()
 --     end
 -- end, {})
-vim.keymap.set("n", "<leader>.", builtin.find_files)
+vim.keymap.set("n", "<leader>.", function()
+    builtin.find_files({
+        find_command = {
+            "rg",
+            "--files",
+            "--ignore-case",
+            "--glob", "!*.class",
+            "--glob", "!*.lst",
+            "--glob", "!*.jar",
+            "--glob", "!*.app",
+            "--glob", "!*.exe",
+        }
+    })
+end)
 
 vim.keymap.set("n", "gd", builtin.lsp_definitions, {})
 vim.keymap.set("n", "gr", builtin.lsp_references, {})

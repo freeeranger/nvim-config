@@ -28,6 +28,7 @@ vim.keymap.set("n", "<leader>P", [["+P]])
 -- Buffer navigation
 vim.keymap.set("n", "<C-j>", ":bprevious<CR>")
 vim.keymap.set("n", "<C-k>", ":bnext<CR>")
+vim.keymap.set("n", "<leader>l", "<C-^>")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]) -- Replace all occurences
 

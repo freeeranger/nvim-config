@@ -35,4 +35,5 @@ whichkey.add({
     { "<leader>r", desc = "Replace selection with register", icon = { icon = "󰛔", color = "cyan" } },
 
     { "<leader>.", desc = "Find files", icon = { icon = "󰮗", color = "cyan" } },
+    { "<leader>l", desc = "Last buffer", icon = { icon = "󰓩", color = "cyan" } },
 })

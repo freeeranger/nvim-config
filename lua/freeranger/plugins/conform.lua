@@ -10,6 +10,7 @@ conform.setup({
         css = { { "prettierd", "prettier" } },
         vue = { { "prettierd", "prettier" } },
         markdown = { { "prettierd", "prettier" } },
+        xml = { "xmlformatter" },
     },
     format_on_save = {
         timeout_ns = 500,
