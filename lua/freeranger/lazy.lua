@@ -76,6 +76,7 @@ require("lazy").setup(
             version = '^4',
             lazy = false,
         },
+        { "nvim-neorg/neorg" }
     },
     {
         ui = {
