@@ -38,7 +38,6 @@ require("lazy").setup(
         {
             "williamboman/mason.nvim",
             lazy = false,
-            config = true,
         },
         {
             "hrsh7th/nvim-cmp",
@@ -75,8 +74,7 @@ require("lazy").setup(
             "mrcjkb/rustaceanvim",
             version = '^4',
             lazy = false,
-        },
-        { "nvim-neorg/neorg" }
+        }
     },
     {
         ui = {
