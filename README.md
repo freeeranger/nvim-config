@@ -10,7 +10,9 @@ My personal neovim configuration
 
 ## Installation:
 Run the following command: 
-```git clone https://github.com/freeeranger/nvim-config.git ~/.config/nvim```
+```bash 
+git clone https://github.com/freeeranger/nvim-config.git ~/.config/nvim
+```
 
 ## Backlog:
 - [ ] Fix conform markdown warnings
