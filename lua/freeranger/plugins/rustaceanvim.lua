@@ -7,18 +7,10 @@ vim.g.rustaceanvim = {
     },
 
     -- LSP configuration
-    server = {
-        -- default_settings = {
-        --     -- rust-analyzer language server configuration
-        --     ['rust-analyzer'] = {
-        --
-        --     },
-        -- },
-    },
+    server = {},
 
     -- DAP configuration
-    dap = {
-    },
+    dap = {},
 }
 
 local function on_attach(client, bufnr)

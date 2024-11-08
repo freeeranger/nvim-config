@@ -88,7 +88,7 @@ mason_lspconf.setup({
         "lua_ls",
         "html",
         "cssls",
-        "tsserver",
+        "ts_ls",
         "tailwindcss",
         "basedpyright",
         "gopls",

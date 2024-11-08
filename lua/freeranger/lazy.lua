@@ -26,7 +26,7 @@ require("lazy").setup(
         { "folke/which-key.nvim" },
         { "nvim-lualine/lualine.nvim" },
         { "catppuccin/nvim",                     name = "catppuccin", priority = 1000 },
-        { "stevearc/oil.nvim" },
+        { "stevearc/oil.nvim",                   config = true },
         { "lukas-reineke/indent-blankline.nvim", main = "ibl" },
         { "norcalli/nvim-colorizer.lua" },
         { "j-hui/fidget.nvim" },
@@ -58,7 +58,8 @@ require("lazy").setup(
         { "rafamadriz/friendly-snippets" },
         {
             "folke/lazydev.nvim",
-            ft = "lua"
+            ft = "lua",
+            config = true,
         },
         { "onsails/lspkind.nvim" },
         {
@@ -68,13 +69,20 @@ require("lazy").setup(
         },
         { "stevearc/conform.nvim" },
         { "nvim-telescope/telescope.nvim" },
-        { "MeanderingProgrammer/markdown.nvim", name = "render-markdown" },
+        { "MeanderingProgrammer/render-markdown.nvim", config = true },
         { "smjonas/inc-rename.nvim" },
         {
             "mrcjkb/rustaceanvim",
             version = '^4',
             lazy = false,
-        }
+        },
+        { 'echasnovski/mini.hipatterns', version = false },
+        { "windwp/nvim-ts-autotag",      config = true },
+        {
+            "toppair/peek.nvim",
+            event = { "VeryLazy" },
+            build = "deno task --quiet build:fast",
+        },
     },
     {
         ui = {
