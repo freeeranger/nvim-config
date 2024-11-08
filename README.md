@@ -17,14 +17,20 @@ Run the following command: `git clone https://github.com/freeeranger/nvim-config
 - [x] A minimal startpage (or just an empty buffer)
 - [x] Markdown preview
 - [ ] Fix conform markdown warnings
-- [ ] Add `refactoring.nvim`
 - [ ] Some kind of git integration
 - [ ] Language specific stuff for python, go, c++, rust
 - [ ] More markdown features (auto table alignment, toggling, etc)
-- [ ] Add `nvim-surround`
 - [ ] Add some kind of code action preview
-- [ ] Some kind of way to quickly move between files, maybe `harpoon`?
+- [ ] Some kind of way to quickly move between files, maybe `harpoon` or `arena`?
 - [ ] Get rid of `lsp-zero`
-- [ ] Add `undotree`
-- [ ] Add `trouble`
 - [ ] Open link in browser
+
+## Cool plugins to potentially add?
+- `refactoring.nvim`
+- `undotree`
+- `trouble`
+- `nvim-surround`
+- `arena.nvim`
+- `blink.cmp`
+- `snacks.nvim`
+- `dressing.nvim`
