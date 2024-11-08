@@ -9,13 +9,10 @@ My personal neovim configuration
 * Rust + cargo nightly
 
 ## Installation:
-Run the following command: `git clone https://github.com/freeeranger/nvim-config.git ~/.config/nvim`
+Run the following command: 
+```git clone https://github.com/freeeranger/nvim-config.git ~/.config/nvim```
 
 ## Backlog:
-- [x] Add `nvim-ts-autotag`
-- [x] Improve `whichkey` icons
-- [x] A minimal startpage (or just an empty buffer)
-- [x] Markdown preview
 - [ ] Fix conform markdown warnings
 - [ ] Some kind of git integration
 - [ ] Language specific stuff for python, go, c++, rust
