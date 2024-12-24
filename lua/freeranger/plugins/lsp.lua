@@ -88,7 +88,6 @@ mason_lspconf.setup({
         "lua_ls",
         "html",
         "cssls",
-        "ts_ls",
         "tailwindcss",
         "basedpyright",
         "gopls",
@@ -113,6 +112,14 @@ mason_lspconf.setup({
             })
         end,
         rust_analyzer = function() end,
+        clangd = function()
+            require("lspconfig").clangd.setup({
+                cmd = {
+                    "clangd",
+                    "--fallback-style=webkit"
+                }
+            })
+        end
     },
 })
 

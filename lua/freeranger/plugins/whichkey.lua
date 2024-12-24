@@ -17,7 +17,7 @@ whichkey.add({
     { "<leader>bf", desc = "Format" },
     { "<leader>bd", desc = "Set cwd" },
     { "<leader>bt", desc = "Trim whitespace", icon = { icon = "", color = "cyan" } },
-    { "<leader>bx", desc = "Close", icon = { icon = "", color = "cyan" } },
+    { "<leader>x", desc = "Close buffer", icon = { icon = "", color = "cyan" } },
 
     { "<leader>c", group = "Code", icon = { icon = "󰅨", color = "cyan" } },
     { "<leader>ca", desc = "Actions", icon = { icon = "", color = "cyan" } },
@@ -36,4 +36,10 @@ whichkey.add({
 
     { "<leader>.", desc = "Find files", icon = { icon = "󰮗", color = "cyan" } },
     { "<leader>l", desc = "Last buffer", icon = { icon = "󰓩", color = "cyan" } },
+
+    { "<leader>t", group = "Terminal", icon = { icon = "", color = "cyan" } },
+    { "<leader>ts", group = "Small", icon = { icon = "", color = "cyan" } },
+    { "<leader>tf", group = "Fullscreen", icon = { icon = "", color = "cyan" } },
+    { "<leader>n", group = "Normal mode", icon = { icon = "", color = "cyan" }, mode = "t" },
+    { "<leader>q", group = "Close", icon = { icon = "", color = "cyan" }, mode = "t" }
 })

@@ -45,7 +45,7 @@ vim.keymap.set("n", "<leader>bt", function()       -- Trim whitespace
         vim.fn.winrestview(current_view)
     end
 end)
-vim.keymap.set("n", "<leader>bx", ":bdelete<CR>")
+vim.keymap.set("n", "<leader>x", ":bdelete!<CR>")
 
 -- Open
 vim.keymap.set("n", "<leader>of", ":Oil<CR>")
